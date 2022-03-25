@@ -3,7 +3,6 @@ root: overview
 parts:
 - caption: Background
   chapters:
-    - file: data-overview/README.md
     - glob: data-overview/*
 - caption: Data Cleaning
   chapters:
