@@ -1,0 +1,21 @@
+name: radar-cookbook-dev
+channels:
+  - conda-forge
+  - defaults
+  - pyviz
+dependencies:
+  - python=3.9
+  - arm_pyart
+  - matplotlib
+  - hvplot
+  - jupyterlab
+  - holoviews
+  - geoviews
+  - cartopy
+  - numpy
+  - dask
+  - distributed
+  - xarray
+  - pandas
+  - datashader
+  - geopandas

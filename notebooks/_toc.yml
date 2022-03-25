@@ -1,0 +1,16 @@
+format: jb-book
+root: overview
+parts:
+- caption: Background
+  chapters:
+    - file: data-overview/README.md
+    - glob: data-overview/*
+- caption: Data Cleaning
+  chapters:
+    - glob: data-cleaning/*
+- caption: Data Visualization
+  chapters:
+    - glob: data-visualization/*
+- caption: Radar Workflows
+  chapters:
+    - glob: workflows/*
