@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Cleaning &#8212; Radar Data Cookbook</title>
+    <title>Ground Based Weather Radars &#8212; Radar Data Cookbook</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Visualization" href="../data-visualization/README.html" />
-    <link rel="prev" title="Data Overview" href="../data-overview/README.html" />
+    <link rel="next" title="Data Overview" href="README.html" />
+    <link rel="prev" title="Radar Data Cookbook" href="../overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,14 +104,14 @@ const thebe_selector_output = ".output, .cell_output"
   Background
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../data-overview/Ground-Based-Radars.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Ground Based Weather Radars
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../data-overview/README.html">
+  <a class="reference internal" href="README.html">
    Data Overview
   </a>
  </li>
@@ -121,9 +121,9 @@ const thebe_selector_output = ".output, .cell_output"
   Data Cleaning
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data-cleaning/README.html">
    Data Cleaning
   </a>
  </li>
@@ -192,9 +192,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/data-cleaning/README.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/data-overview/Ground-Based-Radars.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -212,11 +212,47 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ARM-Development/radar-data-cookbook/main?urlpath=tree/notebooks/data-overview/Ground-Based-Radars.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://jupyterhub.arm.gov/hub/hub/user-redirect/git-pull?repo=https://github.com/ARM-Development/radar-data-cookbook&urlpath=tree/radar-data-cookbook/notebooks/data-overview/Ground-Based-Radars.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vertically-pointing">
+   Vertically Pointing
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -224,20 +260,37 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Cleaning</h1>
+                <h1>Ground Based Weather Radars</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vertically-pointing">
+   Vertically Pointing
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-cleaning">
-<h1>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h1>
-<p>Notebooks related to data cleaning processes</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="ground-based-weather-radars">
+<h1>Ground Based Weather Radars<a class="headerlink" href="#ground-based-weather-radars" title="Permalink to this headline">¶</a></h1>
+<p>This is an overview of ground-based weather radars</p>
+<div class="section" id="vertically-pointing">
+<h2>Vertically Pointing<a class="headerlink" href="#vertically-pointing" title="Permalink to this headline">¶</a></h2>
+<p>For example, we have the KAZR radar.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -253,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-cleaning"
+            path: "./data-overview"
         },
         predefinedOutput: true
     }
@@ -265,17 +318,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../data-overview/README.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Data Overview</p>
+            <p class="prev-next-title">Radar Data Cookbook</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../data-visualization/README.html" title="next page">
+    <a class='right-next' id="next-link" href="README.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Visualization</p>
+        <p class="prev-next-title">Data Overview</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
