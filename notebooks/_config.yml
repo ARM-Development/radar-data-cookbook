@@ -10,4 +10,4 @@ html:
   comments:
     hypothesis: true
 launch_buttons:
-  jupyterhub_url: "https://jupyterhub.arm.gov"
+  jupyterhub_url: "https://jupyterhub.arm.gov/hub"
