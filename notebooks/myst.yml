@@ -1,0 +1,25 @@
+version: 1
+project:
+  title: Radar Data Cookbook
+  authors:
+    - name: ARM Development Team
+  github: ARM-Development/radar-data-cookbook
+  toc:
+    - file: overview.md
+    - title: Background
+      children:
+        - pattern: data-overview/*
+    - title: Data Cleaning
+      children:
+        - pattern: data-cleaning/*
+    - title: Data Visualization
+      children:
+        - pattern: data-visualization/*
+    - title: Radar Workflows
+      children:
+        - pattern: workflows/*
+site:
+  options:
+    logo: images/arm_logo.png
+    folders: true
+  template: book-theme
